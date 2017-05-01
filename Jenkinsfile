@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'python -c "print sjdillon"'
+                sh 'python -c "print 123456789"'
             }
         }
     }
