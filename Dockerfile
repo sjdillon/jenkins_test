@@ -9,4 +9,5 @@ RUN mkdir /etc/ansible/tmp
 RUN echo 'local_tmp = /etc/ansible/tmp' >> /etc/ansible/ansible.cfg
 RUN chmod 777 /
 RUN adduser jenkins
+RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 USER jenkins
