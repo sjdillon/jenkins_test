@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'echo `date`'
+                sh 'echo `whoami`'
                 sh 'apt-get -y update'
                 sh 'apt-get -y install ansible git'
                 sh 'cd /etc/ansible/'
