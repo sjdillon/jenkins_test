@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+   - name: print distro
+     debug: msg='{{ ansible_distribution  }}'
