@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker 'ubuntu' } 
+    agent { docker 'jenkins-1' } 
     stages {
         stage('build') {
             steps {
