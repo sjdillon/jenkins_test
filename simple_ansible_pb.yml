@@ -1,5 +1,5 @@
 ---
 - hosts: all
   tasks:
-   - name: print distro
+   - name: 'what linux distribution is running?'
      debug: msg='{{ ansible_distribution  }}'
