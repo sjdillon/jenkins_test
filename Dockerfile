@@ -8,3 +8,6 @@ RUN apt-get -y install ansible git sudo
 RUN mkdir /etc/ansible/tmp
 RUN echo 'local_tmp = /etc/ansible/tmp' >> /etc/ansible/ansible.cfg
 RUN chmod 777 /
+RUN adduser jenkins
+RUN gpasswd -a jenkins docker
+USER jenkins
