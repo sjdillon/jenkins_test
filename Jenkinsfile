@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh 'python --version'
                 sh 'echo `date`'
-                sh'echo /etc/*-release'
+                sh'cat /etc/*-release'
             }
         }
     }
