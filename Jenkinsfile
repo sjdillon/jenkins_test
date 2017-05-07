@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'echo `date`'
-                sh 'apt-get -y update'
+                sh 'sudo apt-get -y update'
                 sh 'apt-get -y install ansible git'
                 sh 'cd /etc/ansible/'
                 sh 'git clone https://github.com/sjdillon/jenkins_test.git'
