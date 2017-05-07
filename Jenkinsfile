@@ -1,11 +1,14 @@
 pipeline {
-    agent { docker 'python:2.7.13' } 
+    agent { docker 'ubuntu' } 
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
                 sh 'echo `date`'
-                sh'cat /etc/*-release'
+                sh 'apt-get -y update'
+                sh 'apt-get -y install ansible git'
+                sh 'cd /etc/ansible/'
+                sh 'git clone https://github.com/sjdillon/jenkins_test.git'
+                sh 'ansible-playbook -i "localhost," -c local jenkins_test/simple_ansible_pb.yml'
             }
         }
     }
