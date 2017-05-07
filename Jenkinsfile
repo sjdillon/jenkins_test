@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                sh 'su - root'
                 sh 'cd /etc/ansible/'
                 sh 'rm -rf jenkins_test/'
                 sh 'git clone https://github.com/sjdillon/jenkins_test.git'
